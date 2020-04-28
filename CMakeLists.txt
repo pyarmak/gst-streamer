@@ -8,10 +8,7 @@ endif()
 
 pkg_check_modules(GSTREAMER gstreamer-1.0>=1.6 gstreamer-video-1.0>=1.6 REQUIRED)
 
-find_package(Qt5Core REQUIRED)
-find_package(Qt5Widgets REQUIRED)
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
+find_package(Qt5 COMPONENTS Core Widgets Qml Quick REQUIRED)
 
 set (SRC_LIST main.cpp)
 qt5_add_resources(RESOURCES qmlsink.qrc)
